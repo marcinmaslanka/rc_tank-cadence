@@ -1,0 +1,24 @@
+`include "discipline.h"
+
+module rc_lowpass (
+    input  electrical in,      // Eingang
+    output electrical out      // Ausgang
+);
+
+    parameter real R = 1k;     // Widerstand in Ohm
+    parameter real C = 1u;     // Kapazität in Farad
+
+    electrical n1; // Zwischenknoten: zwischen R und C
+
+    analog begin
+        // R zwischen Eingang und Zwischenknoten
+        V(in, n1) <+ I(in, n1) * R;
+
+        // C zwischen Zwischenknoten und Masse
+        I(n1) <+ C * ddt(V(n1));
+
+        // Ausgang direkt am Zwischenknoten
+        V(out) <+ V(n1);
+    end
+
+endmodule
