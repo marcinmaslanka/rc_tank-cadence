@@ -31,12 +31,18 @@ rc_lowpass.va
 2. Place your symbol in the design.
 3. Wire it up like any other component.
 
+![rc](https://github.com/user-attachments/assets/1a3428b0-ba1e-438c-a8c2-b8b102724de8)
+
+
 ## 🧪 4. Run Simulation in ADE
 
 1. Select the simulation Type
 2. Select your simulation type
 3. Choose the outputs to plot
 4. Press Run to start the simulation
+
+![rc](https://github.com/user-attachments/assets/9cc2cf31-de3a-4131-95e8-0828c6d80c70)
+
 
 ---
 
